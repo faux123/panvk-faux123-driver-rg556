@@ -128,10 +128,10 @@ to test on. A device report costs nothing and helps just as much.
 
 **Read this first: you need an app that can load it.** Most driver pickers
 were written for Adreno and refuse or ignore a Mali package.
-[GameNative-Mali](https://github.com/faux123/GameNative-Mali) has PanVK import in
-its source, but I have not published a build of it with that feature yet. Until
-then, this package is for people who build such an app themselves or already
-have one.
+[GameNative-Mali](https://github.com/faux123/GameNative-Mali/releases) can import
+it from version 1.2.1-mali.11: open **Driver Manager**, import the zip, then
+select it for a game under **Graphics**. That import screen is new and has had
+little use, so open an issue if it refuses the package.
 
 1. Download `panvk_faux123_rg556_<version>.adpkg.zip` from
    [Releases](../../releases). Do not unzip it.
