@@ -1,0 +1,3 @@
+# Keep everything out of the automatic release archives (git archive / GitHub "Source code").
+* export-ignore
+.* export-ignore
