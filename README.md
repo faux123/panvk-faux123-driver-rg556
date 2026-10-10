@@ -36,7 +36,7 @@ Nothing here is a repackaged binary from somewhere else. It is built from source
 |---|---|
 | Source | Mesa 26.3.0-devel, from [`funnymdzz/mesa`](https://github.com/funnymdzz/mesa), a Mesa tree that adds a `mali_kbase` backend |
 | Mali-G57 generation support | the patch series from [`Noysz/panvk-g99-jm`](https://github.com/Noysz/panvk-g99-jm) |
-| My patches | 24, summarized under [What I added](#what-i-added) |
+| My patches | 27, summarized under [What I added](#what-i-added) |
 | Toolchain | Android NDK 27.3, meson cross build, `aarch64`, API level 33 |
 | Packaging | `.adpkg.zip`: `libvulkan_panfrost.so` plus `meta.json` |
 
@@ -65,6 +65,9 @@ verified.
   driver. A series of fixes brought that to about 1.06.
 - One scene ran at 3.5 frames a second and now runs at about 29.
 - Indirect draws drew every model with the same texture.
+- Geometry shaders, tessellation, and transform feedback come from the newer
+  Noysz patch series since v0.13.0, with three speed fixes for that series that
+  I made on my Retroid Pocket 4 Pro build, and the job layout fix redone for it.
 - The Android swapchain, GPU clock, and repeated-submit fixes from my
   [Retroid Pocket 4 Pro build](https://github.com/faux123/panvk-faux123-driver-rp4pro).
 
@@ -86,7 +89,12 @@ Wine, no DXVK, no Box64, no emulation. One variable: the driver `.so`.
   because a feature is missing, 3 give no result, 2 have no assets, and none
   crash. The stock driver runs 58.
 - My feature validator passes 14 checks on this driver against 6 on the stock
-  driver.
+  driver. That count is from an earlier version of the validator. With the
+  current one, v0.13.0 passes 103 items and v0.12.0 passed 89.
+
+The sample launch count and the frame times below were measured on v0.11.0 and
+v0.12.0. On v0.13.0 I timed nine scenes against v0.12.0 and they take the same
+time within run-to-run spread; the full set was not run again.
 
 Frame times against the stock Mali driver, over the 52 samples both drivers run:
 1.06 times as long by geometric mean. Nine samples are faster than stock by more
@@ -157,7 +165,11 @@ then it stops. The stock driver does not do this. I have not found the cause.
 **Not offered by this driver on the Mali-G57**, so an app that needs them refuses
 to start rather than failing later:
 
-Tessellation shaders, timestamp queries, and transform feedback.
+Timestamp queries.
+
+Geometry shaders, tessellation shaders, and transform feedback are offered since
+v0.13.0. On this device they have been checked with three small tests and one
+sample scene, not with a conformance run and not with a game.
 
 This driver does offer features the stock driver lacks, which is why it runs
 more of the samples: push descriptors, graphics pipeline library, host image
