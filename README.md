@@ -36,7 +36,7 @@ Nothing here is a repackaged binary from somewhere else. It is built from source
 |---|---|
 | Source | Mesa 26.3.0-devel, from [`funnymdzz/mesa`](https://github.com/funnymdzz/mesa), a Mesa tree that adds a `mali_kbase` backend |
 | Mali-G57 generation support | the patch series from [`Noysz/panvk-g99-jm`](https://github.com/Noysz/panvk-g99-jm) |
-| My patches | 29, summarized under [What I added](#what-i-added) |
+| My patches | 30, summarized under [What I added](#what-i-added) |
 | Toolchain | Android NDK 27.3, meson cross build, `aarch64`, API level 33 |
 | Packaging | `.adpkg.zip`: `libvulkan_panfrost.so` plus `meta.json` |
 
@@ -73,6 +73,11 @@ verified.
   v0.14.0. On my Retroid Pocket 4 Pro the lack of this showed as black dashes in
   a game's textures. This device did not show them; the fix is carried so both
   builds stay the same.
+- A compute shader that runs out of registers gets at least 4 KiB of scratch
+  memory per thread since v0.15.0. On my Retroid Pocket 4 Pro, which has the
+  same generation of GPU, too little made Dragon Ball Sparking Zero run at 0.2
+  frames a second. On this device the game reaches its first fight at 3 to 7
+  frames a second with the fix. I did not run it here without the fix.
 - The Android swapchain, GPU clock, and repeated-submit fixes from my
   [Retroid Pocket 4 Pro build](https://github.com/faux123/panvk-faux123-driver-rp4pro).
 
