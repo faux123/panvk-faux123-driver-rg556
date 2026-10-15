@@ -26,6 +26,11 @@ so I can make no promises there or anywhere else. See
 Grab the latest `.adpkg.zip` from [Releases](../../releases) and import it in an
 app whose driver picker accepts a PanVK package on Mali.
 
+## Test it on your device
+
+- **FauxVkTest** (free, Google Play): compare this driver against your stock driver on your own device. https://play.google.com/store/apps/details?id=com.faux.vktest&referrer=utm_source%3Dgithub%26utm_campaign%3Dpanvk-faux123-driver-rg556
+- **FauxVkDB**: see how other devices score with stock and custom drivers. https://fauxvkdb.canonspike.com/
+
 ---
 
 ## Where the driver comes from
@@ -229,3 +234,9 @@ a kernel interface without taking on the kernel's license.
 
 This project is not affiliated with or endorsed by Arm, Unisoc, Anbernic, Google,
 the Khronos Group, or the Mesa project.
+
+---
+
+## Sponsor
+
+These drivers are Mesa's PanVK with my patches on top; the Mesa developers did the hard part. If my builds help you, you can sponsor my work on GitHub: https://github.com/sponsors/faux123
