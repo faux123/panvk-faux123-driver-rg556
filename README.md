@@ -41,7 +41,7 @@ Nothing here is a repackaged binary from somewhere else. It is built from source
 |---|---|
 | Source | Mesa 26.3.0-devel, from [`funnymdzz/mesa`](https://github.com/funnymdzz/mesa), a Mesa tree that adds a `mali_kbase` backend |
 | Mali-G57 generation support | the patch series from [`Noysz/panvk-g99-jm`](https://github.com/Noysz/panvk-g99-jm) |
-| My patches | 30, summarized under [What I added](#what-i-added) |
+| My patches | 31, summarized under [What I added](#what-i-added) |
 | Toolchain | Android NDK 27.3, meson cross build, `aarch64`, API level 33 |
 | Packaging | `.adpkg.zip`: `libvulkan_panfrost.so` plus `meta.json` |
 
@@ -83,6 +83,12 @@ verified.
   same generation of GPU, too little made Dragon Ball Sparking Zero run at 0.2
   frames a second. On this device the game reaches its first fight at 3 to 7
   frames a second with the fix. I did not run it here without the fix.
+- **Blending is advertised only where the GPU's blender works** since v0.16.0. The
+  driver used to say it could blend into 32-bit float images, which this GPU
+  can only do in the shader. An app that picks the widest float format it can
+  blend into then drew twice the data per pixel that it draws on the stock
+  driver, which does not advertise it. With this, my 4K HDR test scene takes
+  223 ms a frame against 230 ms on the stock driver (551 ms before).
 - The Android swapchain, GPU clock, and repeated-submit fixes from my
   [Retroid Pocket 4 Pro build](https://github.com/faux123/panvk-faux123-driver-rp4pro).
 
