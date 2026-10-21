@@ -1,5 +1,7 @@
 # panvk-faux123-driver-rg556
 
+> **Driver release news, bug reports, and the FauxWall beta sign-up are on the [FauxApps Discord](https://discord.gg/ceyPguKNbu).**
+
 Mesa **PanVK**, the open source Vulkan driver for Arm Mali GPUs, built for
 Android and packaged for [AdrenoTools](https://github.com/bylaws/libadrenotools)
 style driver loading on the **Anbernic RG556** (Mali-G57). The driver itself
@@ -31,7 +33,7 @@ app whose driver picker accepts a PanVK package on Mali.
 - **FauxVkTest** (free, Google Play): compare this driver against your stock driver on your own device. https://play.google.com/store/apps/details?id=com.faux.vktest&referrer=utm_source%3Dgithub%26utm_campaign%3Dpanvk-faux123-driver-rg556
 - **FauxVkDB**: see how other devices score with stock and custom drivers. https://fauxvkdb.canonspike.com/
 - **More apps from the same developer** (FauxClockNG, FauxCooling, RomRoster, Net SD card, and more): https://fauxapps.canonspike.com/
-- **FauxApps Discord**: driver release news, questions, and results from other players. https://discord.gg/2gEkPPxzh3
+- **FauxApps Discord**: driver release news, questions, and results from other players. https://discord.gg/ceyPguKNbu
 
 ---
 
