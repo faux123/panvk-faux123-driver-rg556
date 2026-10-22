@@ -17,8 +17,7 @@ my own hardware before I release it. Each release lists what it changes.
 known rendering fault, described under
 [What works and what does not](#what-works-and-what-does-not).**
 
-**This is a proof of concept, released as is, with no support.** See
-[No support](#no-support).
+**Bug reports and questions are welcome.** See [Getting help](#getting-help).
 
 **Everything here is verified on one device: my Anbernic RG556, Mali-G57 MC4,
 running a custom kernel.** I have not run it on an RG556 with the stock kernel,
@@ -203,12 +202,17 @@ copy, pipeline binary, and vertex input dynamic state among them.
 
 ---
 
-## No support
+## Getting help
 
-This is a proof of concept. I built this driver for my own device, and I am
-releasing it so the community can see what is possible and build on it.
+I built this driver on my own Anbernic RG556 and test it there.
 
-- There is no support from me. I do not answer bug reports or questions.
+- Bug reports and questions are welcome. Open an [issue](../../issues/new) with your
+  device, the driver version, the app you load it in (GameNative, Winlator, an
+  emulator), the game, and what goes wrong. You can also post in
+  [r/faux123](https://www.reddit.com/r/faux123/) with the **PanVK help** flair, or ask
+  in the [FauxApps Discord](https://discord.gg/ceyPguKNbu).
+- A [FauxVkTest](https://play.google.com/store/apps/details?id=com.faux.vktest) result
+  from your device makes a report much easier to act on.
 - I do not take requests for devices I do not own. If I do not have the device,
   I will not develop for it.
 - I do not do remote debugging or beta testing.
