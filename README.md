@@ -46,7 +46,7 @@ Going forward:
   devices are still untested: see [Other devices](#other-devices-not-tested-no-guarantees).
 
 The "What I added" and "How it was tested" sections below are the history of
-this device's earlier builds. Every fix listed there is carried into v1.0.0,
+this device's earlier builds. Every fix listed there is carried into v1.0.1 and later,
 either as my patch or as the equivalent change that is now in the base.
 
 ## Test it on your device
