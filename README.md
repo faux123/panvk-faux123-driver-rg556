@@ -36,9 +36,9 @@ driver, and turns on only the fixes that device needs.
 
 Going forward:
 
-- Each repository keeps its own package name,
-  `panvk_faux123_rg556_<version>.adpkg.zip`. Download from the repository for your
-  device, as before.
+- All four repositories ship the identical package,
+  `panvk_faux123_<version>.adpkg.zip`: the same name and the same bytes. Releases
+  before v1.0.0 keep their old device names.
 - Every release comes out in all four repositories at the same time, with the
   same version number and the same library inside.
 - A fix found on one device reaches the other three in the next release.
@@ -186,7 +186,7 @@ it from version 1.2.1-mali.11: open **Driver Manager**, import the zip, then
 select it for a game under **Graphics**. That import screen is new and has had
 little use.
 
-1. Download `panvk_faux123_rg556_<version>.adpkg.zip` from
+1. Download `panvk_faux123_<version>.adpkg.zip` from
    [Releases](../../releases). Do not unzip it.
 2. Import it in your app's driver manager, the same way you would import a Turnip
    package on an Adreno device.
